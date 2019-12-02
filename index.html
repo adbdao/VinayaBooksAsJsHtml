@@ -4,9 +4,7 @@
     <head>
     <title>律藏會集、三大部、戒律諸書</title>
     <base target="_blank">
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
 <style>
-    
 /**{border-radius: 8px;padding: 3px;}*/
 
 ::selection{background: indigo;color:yellow}
@@ -47,7 +45,7 @@ td::-moz-selection,textarea::-moz-selection{background: darkred;color:yellow}
     -webkit-transform: rotateY(-25deg) rotateX(5deg);
     -webkit-box-reflect: below -20px -webkit-linear-gradient( rgba(0,0,0,0.1), rgba(0,0,0,0.6));
     transition: 2s all ease;*/
-    
+
     animation-name:LumY;
     animation-duration:8s;
     animation-timing-function:linear;
@@ -223,135 +221,96 @@ background-repeat: no-repeat;*/
     filter:invert(1);*/
 
 }
-#menu{
-margin: 100px 0;
-list-style: none;
-border-radius:15px 15px 20px 20px;
-font-weight: bold;
-} 
-.item{
-display: inline-block;
-background:transparent;
-width: 100px;
-height: 50px;
-/*overflow: hidden;*/
-line-height: 50px!important;
-/*-webkit-transition:all .3s ease-out;
-transition: all .3s ease-out;*/
+.name {background:tan;color: crimson;}
 
-font-size: 14pt;
-position: relative;
-text-align: center;
-}
-.item:hover,.item.active,textarea:hover{
-position: relative;
-display: inline-block;
-text-align: center;
+#txt1{width: 80vw;height: 30vh;}
+#ch1911,#ch1911x,.g {font-weight: bold;color: gold;}
+#myValue {width: 80vw;font-weight: bold;color: #aca;}
+#myValue2 {width: 80vw;font-weight: bold;color: snow;}
+#reValue,.t {font-weight: bold;color: tomato;}
+#reUp,.r {font-weight: bold;color: red;}
+.sb {font-weight: bold;color: skyblue;}
+.cy {font-weight: bold;color: cyan;}
+.ky {font-weight: bold;background: khaki;}
+.pink {font-weight: bold;color: pink;}
+.y {font-weight: bold;background: yellow;}
+.o {font-weight: bold;color: darkorange;}
+.yg {font-weight: bold;color: green;}
+.dc {font-weight: bold;color: darkcyan;}
+.dg {font-weight: bold;color: salmon;}
+.b {font-weight: bold;color: blue;}
+.p {font-weight: bold;color: slateblue;}
+.m {font-weight: bold;color: magenta;font-size: 110%;}
+.dv {font-weight: bold;color: darkviolet;}
+.lg {font-weight: bold;color: limegreen;}
+.lsg {font-weight: bold;color: lightseagreen;}
 
-background: -webkit-linear-gradient(top, #CC7244 0.00%, #FD7F44 32.86%, #F58246 68.93%, #BE6E48 100.00%);
-background: linear-gradient(top, #CC7244 0.00%, #FD7F44 32.86%, #F58246 68.93%, #BE6E48 100.00%);
-z-index: 2;
-width: 120px;
-top: -8px;
-border-radius:10px 10px 50% 50%;
-border-top: 1px solid #f7a273;
-border-left: none;
-border-right: none;
-text-align: center;
-box-shadow:0 2px 1px 0 #963004, 0 4px 1px -1px #852A03, 0 6px 1px -2px #812802, 0 8px 1px -3px #7D2803, 0 10px 1px -4px #661F01, 0 12px 1px -5px #521A02, 0 14px 1px -6px #401601, 0 16px 1px -7px #3C1501, 0 18px 1px -8px #2D1001, 0 20px 1px -9px #110500, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.75), 0 20px 4px -6px rgba(0, 0, 0, 0.9), 0 45px 5px -5px rgba(0, 0, 0, 0.05), 0 35px 10px -5px rgba(0, 0, 0, 0.1), 0 25px 55px 5px rgba(0, 0, 0, 0.15);
-z-index:0;
-/*-webkit-transition:background border-radius 0.5s ease;
-transition: background border-radius 0.5s ease;
--webkit-transition:box-shadow 0.3s ease;
-transition: box-shadow 0.3s ease;*/
+#mula {
+    width: 80vw;
+    margin: 0 10vw;
 }
-.item>a,input{
-text-align: center;
-color: cyan;
-font-size: 14pt;
-text-decoration:none;
-text-shadow: 1px 2px 2px blue;
-}
-.item:hover>a,.item.active>a{
-display: block;
-text-align: center;
-color: white;
-z-index: 10;
-font-weight: bold;
-text-shadow: 1px 2px 2px black;
-width: 120px;
+/*暗色主題*/
+
+/*.big {
+    background: darkslategray;
+    color: tomato;
+    font-size: 18pt;
+    font-family: '標楷體';
+    line-height: 36pt;
 }
 
-.item>ul{
-display: none;
-/*float: left;*/
-position: absolute;
-list-style: none;
-margin: 0 -400px;
-width: 80vw;
-background: -webkit-linear-gradient(top, silver 0.00%, #EFEFEF 32.86%, #bbb 68.93%, #aaa 100.00%);
-background: linear-gradient(top, silver 0.00%, #EFEFEF 32.86%, #bbb 68.93%, #aaa 100.00%);
-border-radius:25px 35px 35px 35px;
-/*box-shadow:0 2px 1px 0 #BEBEBE, 0 4px 1px -1px #B8B8B8, 0 6px 1px -2px #B3B3B3, 0 8px 1px -3px #ADADAD, 0 10px 1px -4px #AAAAAA, 0 12px 1px -5px #A7A7A7, 0 14px 1px -6px #9C9C9C, 0 16px 1px -7px #939393, 0 18px 1px -8px #8B8B8B, 0 20px 1px -9px #666666, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 20px 4px -6px rgba(0, 0, 0, 0.9), 0 45px 5px -5px rgba(0, 0, 0, 0.05), 0 35px 10px -5px rgba(0, 0, 0, 0.1), 0 25px 55px 5px rgba(0, 0, 0, 0.15);*/
--webkit-filter:brightness(.7);
-filter:brightness(.7);
-/*opacity: 0.8;*/
-}
-.item:hover>ul,.item>ul:hover{
-display: inline-block;
-}
-.myli{
-display: inline-block;
-margin: 0;
-padding: 10px;
-width: 200px;
-/*height:50px; */
-font-size: 16pt;
-font-family: '標楷體';
-color:black;
-}
-.myli:hover{
-display: inline-block;
-color: snow;
-background: linear-gradient(top,#0d0 0%,#0a0 20%,#080 80%,#050 100%);
-background: -webkit-linear-gradient(top,#0d0 0%,#0a0 20%,#080 80%,#050 100%);
-
-margin-top: -8px;
-border-radius: 15% 25% 50% 50%;
-box-shadow: 0 4px 1px -1px #0b5, 0 6px 1px -2px #0a0, 0 10px 1px -4px #090, 0 12px 1px -5px #095, 0 14px 1px -6px #070, 0 16px 1px -7px #077, 0 18px 1px -8px #050, 0 20px 1px -9px #030, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.75), 0 20px 4px -6px rgba(0, 0, 0, 0.9), 0 45px 5px -5px rgba(0, 0, 0, 0.05), 0 35px 10px -5px rgba(0, 0, 0, 0.1), 0 25px 55px 5px rgba(0, 0, 0, 0.15);
-/*-webkit-transition:background border-radius 0.5s ease;
-transition: background border-radius 0.5s ease;
--webkit-transition:box-shadow 0.3s ease;
-transition: box-shadow 0.3s ease;*/
+a {
+    color: yellow;
+    font-size: 14pt;
+    text-decoration: none;
 }
 
-input:hover{border: 2px solid fuchsia;box-shadow: 5px 5px 20px darkorchid}
-input:active,textarea:active{border-color: indigo #f3f #f6f indigo;border-width:5px;border-style:solid;box-shadow: 5px -5px 20px darkorchid}
-#txt1{margin:1px;width:80%;height:40px;border-radius: 8px;padding: 3px;}
+.small {
+    line-height: 30pt;
+    border: 2px solid black;
+    background: -webkit-linear-gradient(top, #888 0%, #555 15%, #333 85%, #111 100%);
+    background: linear-gradient(top, #888 0%, #555 15%, #333 85%, #111 100%);
+}*/
 
-#dhout{
-/*position: relative;*/
-position: absolute;
-float:right;
-/*margin: 0 ;*/
-right:10vw;
-width: 60vw;
-height: 60vh;
-border-radius: 20px;
-background: white;
-opacity: 0.5;
-padding-top: 10px;
-padding-left: 20px;
+/*淺色主題*/
+.big {
+    background: tan;
+    color: brown;
+    font-size: 18pt;
+    font-family: '標楷體';
+    line-height: 36pt;
 }
-iframe{
-width:95%;
-height:90%;
-/*marginwidth:20px;
-marginheight:10px;*/
+
+a {
+    color: black;
+    font-size: 14pt;
+    text-decoration: none;
 }
+
+.small {
+    line-height: 30pt;
+    border: 2px solid peru;
+    background: -webkit-linear-gradient(top, #ffe 0%, #ddd 15%, #bbb 85%, #777 100%);
+    background: linear-gradient(top, #ffe 0%, #ddd 15%, #bbb 85%, #777 100%);
+}
+
+.small:hover {
+    border-color: green lime lime green;
+    border-width: 2px;
+    border-style: solid;
+    background: greenyellow;
+}
+
+.small:active {
+    border-color: indigo #f3f #f6f indigo;
+    border-width: 3px;
+    border-style: solid;
+    background: pink;
+}
+
 </style>
 <script>
-var ArrLi = ["鈔 記.html","襌堂日行規矩1-1.html","行宗記.pdf","行 宗 記.html","缽之大小.pdf","濟  緣  記.html","演講次序(對初學介紹戒定慧).txt","沙彌不得閱讀比丘戒.pdf","戒律中用齋相關事.txt","戒律中用齋相關事.pdf","戒律中各戒條時限簡表.pdf","慈悲喜捨的禪修方法：《清淨道論》梵住品.txt","慈悲喜捨的禪修方法：《清淨道論》梵住品.pdf","律藏會集_5種主題.html","廣嚴淨苑結大界唱相文.html","廣化律師全集.html","廣化律師全集(未受具閱讀版).html","居士五戒八戒菩薩戒懺悔法(圓體).pdf","四分律隨機羯磨講義(全).pdf","南普陀寺歷任主持簡史表(直式).pdf","南普陀寺歷任主持簡史表(直式).html","南普陀寺歷任主持簡史表(橫式).pdf","南北傳明相.pdf","佛恩寺結大界唱相文.html","三時繫念疏文樣本.pdf","三時繫念疏文樣本.docx","三時繫念疏文樣本(小).pdf","三時繫念疏文樣本(小).docx","README.md"]
+var ArrLi = ["鈔 記.html","襌堂日行規矩1.txt","襌堂日行規矩1.html","襌堂日行規矩1-1.html","行宗記.pdf","行 宗 記.html","缽之大小.pdf","缽之大小.docx","濟  緣  記.html","演講次序(對初學介紹戒定慧)1.pdf","演講次序(對初學介紹戒定慧).txt","演講次序(對初學介紹戒定慧).pdf","演講次序(對初學介紹戒定慧).docx","演講次序(安般念).pdf","演講次序(安般念).docx","演講次序(五戒).pdf","沙彌居士先閱律藏.txt","沙彌不得閱讀比丘戒.pdf","沙彌不得閱讀比丘戒.docx","戒律中用齋相關事.txt","戒律中用齋相關事.pdf","戒律中用齋相關事.docx","戒律中各戒條時限簡表.txt","戒律中各戒條時限簡表.pdf","慈悲喜捨的禪修方法：《清淨道論》梵住品.txt","慈悲喜捨的禪修方法：《清淨道論》梵住品.pdf","慈悲喜捨的禪修方法：《清淨道論》梵住品.docx","律藏會集_5種主題.html","廣嚴淨苑結大界唱相文.html","廣嚴淨苑結大界唱相文.docx","廣化律師全集.html","廣化律師全集(未受具閱讀版).html","居士出家前，家產應處理清楚.pdf","居士出家前，家產應處理清楚.docx","居士五戒八戒菩薩戒懺悔法.docx","居士五戒八戒菩薩戒懺悔法(圓體).pdf","四分律隨機羯磨講義(全).pdf","南普陀寺歷任主持簡史表(直式).xlsx","南普陀寺歷任主持簡史表(直式).pdf","南普陀寺歷任主持簡史表(直式).html","南普陀寺歷任主持簡史表(橫式).xlsx","南普陀寺歷任主持簡史表(橫式).pdf","南北傳明相.pdf","佛恩寺結大界唱相文.html","五戒述要釋天因敬編.pdf","五戒述要釋天因敬編.docx","三時繫念疏文樣本.pdf","三時繫念疏文樣本.docx","三時繫念疏文樣本(小).pdf","三時繫念疏文樣本(小).docx","README.md","dirToIndex.js"]
 var ArrLi1=[
 'x-to-h(目錄超連結).txt','x-to-h(目錄超連結2).txt','x-to-h(目錄超連結3).txt','x-to-h(註釋).txt','x-to-h.css','x-to-h.txt'
 ]
@@ -417,6 +376,27 @@ function CarLum(){
     //     css3(Co1,{transform:'rotate('+time+'deg)','transform-origin':'50% 50%'})
     // },60)
 }
+function mulaDiv() {
+    // 以傳統js語法，不用jQuery 或 jquery.mobile，動態插入網址，這樣，所有瀏覽器都支援
+    // 因為不用ol li 所以自訂 有序清單 的數字
+    var j = 1
+    for (var k of ArrLi) {
+        var g = document.createElement('div')
+        var aA = document.createElement('a')
+        // 加入超連結
+        aA.setAttribute('href', './' + k)
+        aA.innerHTML = '　' + j + '.　' + k
+        if(/pdf/.test(k)){aA.className = 'r'}
+        if(/doc/.test(k)){aA.className = 'b'}
+        if(/xls/.test(k)){aA.className = 'yg'}
+        // if(/htm/.test(k)){aA.className = 'dv'}
+
+        g.className = 'small'
+        g.appendChild(aA)
+        mula.appendChild(g)
+        j++
+    }
+}
 function menuUl(){
     // var oUl=document.getElementsByClassName('item')[0]
     var ul1=document.createElement('ul')
@@ -446,39 +426,13 @@ function menuUl1(){
     }
     li1.appendChild(ul1)
 }
-
-// 加入超連結語法
-//    document.getElementById('your-div').addEventListener('click', function() {
-//     location.href = 'http://your-url.com'
-// }, false);
-// newlink = document.createElement('a');
-// newlink.setAttribute('class', 'signature');
-// newlink.setAttribute('href', 'showSignature(xyz)');
-
-//     var x = document.createElement("BASE");
-//     x.setAttribute("href", "https://www.w3schools.com");
-//     document.head.appendChild(x);
-//     //or  document.body.appendChild(x);
-
-//     document.getElementById("myAnchor").href = "http://www.cnn.com/";
-//     document.getElementById("demo").innerHTML = "The link above now goes to"
-
-
 </script>
     </head>
-    <body id="body" onload="CarLum(),menuUl(),menuUl1()">
+    <body id="body" onload="CarLum(),mulaDiv()">
         <div id="Lumout">
         </div>
-    <!--<div id="dhout"><iframe src="Lum.html" frameborder="0"></iframe></div>-->
-    <ul id="menu">
-        <!--<li class="item"><a href="javascript:window.location.reload()">重整頁面</a></li>-->
-        <input id="btn2" class="item" type="button" onclick="window.location.reload()" value="重整頁面">
-        <li class="item"><a href="http://adbdao.blogspot.com/2018/07/blog-post.html" target="_blank">資料連結點</a></li>
-        <li class="item"><a href="../">上一層目錄</a></li>
-        <li class="item"><a href="./">本層目錄</a></li>
-        <li class="item" id="li1"><a href="x-to-h/">轉換表</a></li>
-        <br/>
-        <!--<textarea id="txt1"></textarea>-->
-	</ul>
+    <div id="mula">
+        <h1 class="big">律藏會集、三大部、戒律諸書</h1>
+    </div>
     </body>
 </html>
