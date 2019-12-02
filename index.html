@@ -244,6 +244,8 @@ background-repeat: no-repeat;*/
 .dv {font-weight: bold;color: darkviolet;}
 .lg {font-weight: bold;color: limegreen;}
 .lsg {font-weight: bold;color: lightseagreen;}
+.da {font-weight: bold;color: darkred;}
+.bt {font-weight: bold;}
 
 #mula {
     width: 80vw;
@@ -279,6 +281,7 @@ a {
     font-size: 18pt;
     font-family: '標楷體';
     line-height: 36pt;
+    text-align: center;
 }
 
 a {
@@ -386,10 +389,10 @@ function mulaDiv() {
         // 加入超連結
         aA.setAttribute('href', './' + k)
         aA.innerHTML = '　' + j + '.　' + k
-        if(/pdf/.test(k)){aA.className = 'r'}
+        if(/pdf/.test(k)){aA.className = 'da'}
         if(/doc/.test(k)){aA.className = 'b'}
         if(/xls/.test(k)){aA.className = 'yg'}
-        // if(/htm/.test(k)){aA.className = 'dv'}
+        if(/htm/.test(k)){aA.className = 'bt'}
 
         g.className = 'small'
         g.appendChild(aA)
