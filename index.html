@@ -379,28 +379,6 @@ function CarLum(){
     //     css3(Co1,{transform:'rotate('+time+'deg)','transform-origin':'50% 50%'})
     // },60)
 }
-function mulaDiv() {
-    // 以傳統js語法，不用jQuery 或 jquery.mobile，動態插入網址，這樣，所有瀏覽器都支援
-    // 因為不用ol li 所以自訂 有序清單 的數字
-    var j = 1
-    for (var k of ArrLi) {
-        var g = document.createElement('div')
-        var aA = document.createElement('a')
-        // 加入超連結
-        aA.setAttribute('href', './' + k)
-        aA.innerHTML = '　' + j + '.　' + k
-        // 加入顏色樣式，以區分PDF檔等
-        if(/pdf/.test(k)){aA.className = 'da'}
-        if(/doc/.test(k)){aA.className = 'b'}
-        if(/xls/.test(k)){aA.className = 'yg'}
-        if(/htm/.test(k)){aA.className = 'bt'}
-
-        g.className = 'small'
-        g.appendChild(aA)
-        mula.appendChild(g)
-        j++
-    }
-}
 function menuUl(){
     // var oUl=document.getElementsByClassName('item')[0]
     var ul1=document.createElement('ul')
@@ -430,13 +408,50 @@ function menuUl1(){
     }
     li1.appendChild(ul1)
 }
+function mulaDiv() {
+    // 以傳統js語法，不用jQuery 或 jquery.mobile，動態插入網址，這樣，所有瀏覽器都支援
+    // 因為不用ol li 所以自訂 有序清單 的數字
+    var j = 1
+    for (var k of ArrLi) {
+        var g = document.createElement('div')
+        var aA = document.createElement('a')
+        // 加入超連結
+        aA.setAttribute('href', './' + k)
+        aA.innerHTML = '　' + j + '.　' + k
+        // 加入顏色樣式，以區分PDF檔等
+        if(/pdf/.test(k)){aA.className = 'da'}
+        if(/doc/.test(k)){aA.className = 'b'}
+        if(/xls/.test(k)){aA.className = 'yg'}
+        if(/htm/.test(k)){aA.className = 'bt'}
+
+        // 加入data*名稱，才可動態查詢，有了這個屬性，可以用 CSS 來獲取
+        g.setAttribute('data-title', k.toLowerCase())
+        g.className = 'small'
+        g.appendChild(aA)
+        mula.appendChild(g)
+        j++
+    }
+}
+function dt() {
+    // 查詢，並動態呈現
+    // 把輸入值轉小寫，就可以大小寫通查，因為在data-title已轉小寫
+    var x = search.value.toLowerCase()
+    if (!x) {
+        // 當沒有數值的時候，清空style，避免清空的時候無法還原所有的清單
+        search_style.innerHTML = ''
+    } else {
+        // style 裡面動態寫入寫入下方的 CSS，如此一來，data-title 裡面只要有吻合的字串，就會顯示，沒有就會被加入display:none的屬性
+        search_style.innerHTML = '.small:not([data-title*="' + x + '"]) {display: none;}'
+    }
+}
 </script>
+    <style id="search_style"></style>
     </head>
     <body id="body" onload="CarLum(),mulaDiv()">
         <div id="Lumout">
         </div>
     <div id="mula">
-        <h1 class="big">律藏會集、三大部、戒律諸書</h1>
+        <h1 class="big">律藏會集、三大部、戒律諸書 <input type="text" id="search" style="height:14pt;width:100px;" placeholder="輸入關鍵字查詢" onkeyup="dt()"></h1>
     </div>
     </body>
 </html>
