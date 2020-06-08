@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="utf-8">
+
+<head>
+    <title>戒律中各戒條時限簡表</title>
+    <base target="_blank">
+    <style>
+*{border-radius: 8px;padding: 3px;}
+html{background: black;color:yellow;}
+::selection {
+background: darkred;
+color: yellow;
+}
+
+::-moz-selection {
+background: darkred;
+color: yellow;
+}
+td:nth-of-type(odd){
+/*background: lightgreen; */
+font-size: 1.2em;
+font-weight:bold;
+text-align:center;
+}
+/*td:nth-of-type(even){ background: lightblue; }*/
+input:hover,textarea:hover{border: 2px solid fuchsia;box-shadow: 5px 5px 20px darkorchid;}
+input:active,textarea:active{border-color: indigo #f3f #f6f indigo;border-width:5px;border-style:solid;box-shadow: 5px -5px 20px darkorchid;}
+td:hover{border: 1px solid fuchsia;box-shadow: 5px 5px 20px darkorchid;}
+#tab1{border: 3px solid darkgoldenrod;}
+td{border: 1px solid indigo;}
+input {height: 30px;background:pink;color: navy;}
+#div0 {background:#ccc;}
+#div1 {font-size: 76pt;color: #ccb;font-family: c;
+/*margin: 0 0 0 3cm;*/
+}
+#div1 input {background:#fec;}
+#div2 input {background:#aea;}
+#div3 input {background:#ff8;}
+#div4 input {background:#f99;}
+.name {background:tan;color: crimson;}
+
+#txt1{width: 130px;height: 30px;}
+#myValue {width: 200px;background: #aca;}
+#myValue2 {width: 200px;background: snow;}
+.g {background: gold;}
+.t {background: tomato;}
+.r {background: red;}
+.sb {background: skyblue;}
+.ky {background: khaki;}
+.pink {background: pink;}
+.y {background: yellow;}
+.o {background: orange;}
+.yg {background: yellowgreen;}
+.b {background: lightblue;}
+.p {background: mediumpurple;}
+.lg {background: limegreen;}
+.lsg {background: lightseagreen;}
+.lc {background: lightcyan;}
+.gy {background: greenyellow;}
+.tan {background: tan;}
+#reload {height: 40px;background: yellowgreen;}
+    </style>
+    <script>
+        var oBody = document.getElementsByTagName('body')
+
+        function changeColor(col, bg) {
+            div1.style.color = col
+            div1.style.background = bg
+            tab1.style.color = col
+            tab1.style.background = bg
+        }
+        function changeSize(sz) {
+            div1.style.fontSize = sz
+            tab1.style.fontSize = sz
+        }
+        function changeFamily(ff) {
+            div1.style.fontFamily = ff
+            tab1.style.fontFamily = ff
+        }
+        window.onload = function () {
+            btn1.onclick = function () {
+                changeColor('black', 'beige')
+            }
+            btn2.onclick = function () {
+                changeColor('#ccb', '#000')
+            }
+            btn3.onclick = function () {
+                changeColor('darkslategray', 'khaki')
+            }
+            btn5.onclick = function () {
+                changeColor('darkblue', 'tan')
+            }
+            btn4.onclick = function () {
+                changeColor('maroon', '#aca')
+            }
+            btn6.onclick = function () {
+                changeSize('76pt')
+            }
+            btn7.onclick = function () {
+                changeSize('20pt')
+            }
+            btn8.onclick = function () {
+                changeSize('16pt')
+            }
+            btn9.onclick = function () {
+                changeSize('48pt')
+            }
+            myValue.onkeyup = function () {
+                changeSize(myValue.value + 'pt')
+            }
+            myValue2.onkeyup = function () {
+                changeFamily(myValue2.value)
+            }
+
+            txt1.onkeyup = function () {
+                div1.innerHTML = txt1.value
+            }
+
+            var VinayaTime = [
+                '時間	相關戒條',
+                '未來世	菩薩戒體。大界(眾僧不捨)',
+                '終身	比丘比丘尼沙彌沙彌尼戒體。五戒戒體(有部)。學悔沙彌。乞缽捨懺。僧殘行摩那埵竟未得20僧出罪(算清淨)。終身藥。金錢(向比丘說淨、淨主未死)。長衣缽(淨主未死)',
+                '數年(或至緣盡)	僧殘別住(尼無)。三舉四羯磨。覓罪相羯磨。覆缽羯磨。學家羯磨。尼與僧作不禮法羯磨',
+                '12年	比丘尼度弟子',
+                '10年	比丘度弟子',
+                '6年	新學比丘尼學戒。減六年臥具。比丘尼作阿闍黎',
+                '5年	新學比丘學戒。不學無知。比丘作阿闍黎',
+                '2年	式叉學戒。新戒比丘尼隨和尚尼',
+                '1年	比丘尼滿十二月授人具戒',
+                '5月	功德衣五利(迦提五月)',
+                '4月	4月請藥。外道共住。增自恣。閏月安居',
+                '3月	安居',
+                '1月	安居1月法出界(尼無)。無功德衣五利(迦提一月)。月望衣',
+                '半月	安居半月法出界(尼無)。比丘尼摩那埵。洗浴(減半月)。剃髮(過半月)。比丘尼請教誡(或禮僧足)。誦戒。滅諍說戒(最多可增2個半月)',
+                '10日	長衣(缽、金錢說淨)。急施衣',
+                '7日	安居7日法。7日藥',
+                '6日	比丘摩那埵。難處離衣宿',
+                '5日	不看大衣(比丘尼)。縫大衣(比丘尼)',
+                '3日	與未受具人共宿。軍中宿',
+                '1日	六念法。離衣宿。八戒(有部)。非時藥。羯磨法(不過夜)。獨宿(比丘尼)。殘宿食。與食內宿。比丘尼本部受戒已不即往大僧受戒。覆藏(覆自、覆他)。經宿不辭而去(比丘尼)。安居竟去(比丘尼)',
+                '半日	時藥。非時食。上午各種應供事。非時入聚落。教比丘尼至日沒',
+                '48分	受三種藥(非時、七日、終身)作淨時限'
+            ]
+            // 範例圖表
+            function addTable(ps, tab, background, Arr, nt) {
+                // 二維陣列
+                var Arr2 = []
+                // 必須加入tbody，否則無法插入td
+                tab.innerHTML = ps + '<tbody></tbody>'
+                for (var i = 0; i < Arr.length; i++) {
+                    Arr2[i] = Arr[i].split(nt)
+                    var oTr = document.createElement('tr')
+                    // 記得用[i]
+                    for (var j of Arr2[i]) {
+                        var oTd = document.createElement('td')
+                        oTd.innerHTML = j
+                        oTr.appendChild(oTd)
+                    }
+                    tab.tBodies[0].appendChild(oTr)
+                    tab.style.background = background
+                }
+            }
+            addTable(' ', tab1, 'black', VinayaTime, '\t')
+        }
+    </script>
+</head>
+
+<body>
+    <input id="reload" type="button" value="重整頁面" onclick="javascript:window.location.reload()" />
+    <input id="btn1" type="button" value="白色系主題">
+    <input id="btn3" type="button" value="黃色系主題">
+    <input id="btn5" type="button" value="茶色系主題">
+    <input id="btn4" type="button" value="綠色系主題">
+    <input id="btn2" type="button" value="黑色系主題">
+
+    <input id="btn8" type="button" value="16號字">
+    <input id="btn7" type="button" value="20號字">
+    <input id="btn9" type="button" value="48號字">
+    <input id="btn6" type="button" value="76號字">
+    <input id="myValue" type="number" placeholder='輸入數字，立刻變換字體大小' />
+    <input id="myValue2" type="text" placeholder='輸入字型名稱，立刻變換字型' />
+    <textarea id="txt1" type="text" placeholder='可打字'></textarea>
+    <br/>
+    <div id="div1"></div>
+    <table id="tab1"></table>
+</body>
+
+</html>
