@@ -3,7 +3,10 @@
 >> 三大部轉換：  
 第一版，測試：從以前的accelon3的xml原檔中，轉換成html，並加上css樣式，及一點點js動態功能  
 ## 有些是教學用、投影用…的講義，所以轉為PDF格式，以便跨平台，放在手機上再作投影！  
-***  
+  
+>> 展示網址 https://adbdao.github.io/VinayaBooksAsJsHtml/  
+  
+---  
 #### Git常用指令  
 * 刪除上一次推送。出問題時，使用此命令  
 git remote rm origin  
@@ -18,7 +21,7 @@ git commit --amend --no-edit
 合并上一次提交（用于反复修改）  
 git commit --amend -m 'xxx'  
   
-***  
+---  
 #### Git基本起始指令  
 1. echo "# VinayaBooksAsJsHtml" >> README.md  
 git init  
@@ -31,4 +34,3 @@ git push -u origin master
 git clone https://github.com/adbdao/VinayaBooksAsJsHtml.git  
 git remote add origin https://github.com/adbdao/VinayaBooksAsJsHtml.git  
 git push -u origin master  
-***  
