@@ -423,6 +423,7 @@ function mulaDiv() {
         if(/pdf/.test(k)){aA.className = 'da'}
         if(/doc/.test(k)){aA.className = 'b'}
         if(/xls/.test(k)){aA.className = 'yg'}
+        if(/ppt/.test(k)){aA.className = 'dv'}
         if(/htm/.test(k)){aA.className = 'bt'}
 
         // 加入data*名稱，才可動態查詢，有了這個屬性，可以用 CSS 來獲取
@@ -463,9 +464,12 @@ function dt() {
         </div>
     <div id="mula">
         <h1 class="big">律藏會集、三大部、戒律諸書 <input type="text" id="search" style="height:14pt;" placeholder="輸入關鍵字查詢" onkeyup="dt()">
-            <input id="cbr" type="button" class="dc" value="篩選出文字網頁檔" onclick="MyIni('t')">
+            <input id="cbr" type="button" class="dc" value="僅文字網頁" onclick="MyIni('t')">
+            <input id="pdf" type="button" class="da" value="僅pdf" onclick="MyIni('pdf')">
+            <input id="doc" type="button" class="b" value="僅doc" onclick="MyIni('doc')">
+            <input id="xls" type="button" class="yg" value="僅xls" onclick="MyIni('xls')">
+            <input id="ppt" type="button" class="t" value="僅ppt" onclick="MyIni('ppt')">
         </h1>
-        <!--<div data-title="四分律綱目.html" class="small"><a href="https://adbdao.github.io/my-adb.ini/v4search.html" class="bt">　0.　四分律綱目.html</a></div>-->
     </div>
     </body>
 </html>
