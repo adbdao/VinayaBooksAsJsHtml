@@ -24,7 +24,7 @@ for (var i = 0; i < k.length; i++) {
     if (/var ArrLi\s?\=/.test(k[i])) {
         k[i] = 'var ArrLi = ["' + d.join('","') + '"]'
         // 刪除不需要的檔
-        k[i] = k[i].replace(',".git"', '').replace(',"index.html"', '').replace(',"dirToIndex.js"', '').replace(',"dir.js"', '').replace(',"x-to-h"', '').replace(',"debug.log"', '').replace(',"_config.yml"', '')
+        k[i] = k[i].replace(',".git"', '').replace(',"index.html"', '').replace(',"dirToIndex.js"', '').replace(',"dir.js"', '').replace(',"x-to-h"', '').replace(',"debug.log"', '').replace(',"_config.yml"', '').replace(',".gitignore"', '')
     }
 }
 
