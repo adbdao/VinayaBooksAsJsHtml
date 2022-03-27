@@ -33,3 +33,14 @@ git push -u origin master
 git clone https://github.com/adbdao/VinayaBooksAsJsHtml.git  
 git remote add origin https://github.com/adbdao/VinayaBooksAsJsHtml.git  
 git push -u origin master  
+  
+---  
+#### 只推送單一tag  
+git push origin v1.0
+  
+---  
+#### 如何告訴 git 縮寫的指令  
+git config alias.co checkout  
+> 查看所有指令  
+
+git config --list  
