@@ -4,6 +4,9 @@
 ## 有些是教學用、投影用…的講義，所以轉為PDF格式，以便跨平台，放在手機上再作投影！  
   
 >> 展示網址 https://adbdao.github.io/VinayaBooksAsJsHtml/  
+>###  漸進式網站PWA  
+  1. Android自動安裝成APP  
+  2. iPhone請使用「加到主頁面」  
   
 ---  
 #### Git常用指令  

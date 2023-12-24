@@ -1,0 +1,31 @@
+{
+    "name": "戒律講義PWA",
+    "short_name": "戒律講義",
+    "description": "戒律講義PWA",
+    "lang": "zh-Hant-TW",
+    "version": "8.5",
+    "author": "DaoChung",
+    "icons": [
+        {
+            "src": "icons/j48.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/j192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/j512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "display": "standalone",
+    "scope": "/VinayaBooksAsJsHtml/",
+    "start_url": "/VinayaBooksAsJsHtml/",
+    "id": "/VinayaBooksAsJsHtml/",
+    "theme_color": "#ffa500",
+    "background_color": "#a52a2a"
+}
