@@ -242,7 +242,7 @@ background-repeat: no-repeat;*/
 .dg {font-weight: bold;color: salmon;}
 .b {font-weight: bold;color: blue;}
 .p {font-weight: bold;color: slateblue;}
-.m {font-weight: bold;color: magenta;font-size: 110%;}
+.m {font-weight: bold;color: magenta;}
 .dv {font-weight: bold;color: darkviolet;}
 .lg {font-weight: bold;color: limegreen;}
 .lsg {font-weight: bold;color: lightseagreen;}
@@ -315,7 +315,7 @@ a {
 
 </style>
 <script>
-var ArrLi = ["＠戒學答問.txt","過量床足戒.txt","菩薩戒體相關資料.txt","為何要持戒.txt","滅諍犍度.txt","期末考2023下.txt","期末考2023.txt","期末考2022下.txt","期末考2022.txt","期中考2023下.txt","期中考2023.txt","期中考2022下.txt","期中考2022.txt","有難蘭若受食戒「弓量」.txt","新衣不作壞色著戒.txt","授具足戒.txt","戒律書畾.adb.ini","戒學答問.html","懺悔的意義.txt","律藏的文獻層次.html","四諍.txt","內觀染著.txt","不受食戒.txt","txtmore.js","taisho.adb.ini","onlytxtmore.js","onlymoretag.js","nnn.txt","moretag.js"]
+var ArrLi = ["＠戒學答問.txt","過量床足戒.txt","菩薩戒體相關資料.txt","為何要持戒.txt","滅諍犍度.txt","期末考2023下.txt","期末考2023.txt","期末考2022下.txt","期末考2022.txt","期中考2023下.txt","期中考2023.txt","期中考2022下.txt","期中考2022.txt","有難蘭若受食戒「弓量」.txt","新衣不作壞色著戒.txt","授具足戒.txt","戒律書畾.adb.ini","戒學答問.html","懺悔的意義.txt","律藏的文獻層次.html","四諍.txt","內觀染著.txt","不受食戒.txt","txtmore.js","taisho.adb.ini","onlytxtmore.js","onlymoretag.js","moretag.js"]
 var ArrLi1=[
 'x-to-h(目錄超連結).txt','x-to-h(目錄超連結2).txt','x-to-h(目錄超連結3).txt','x-to-h(註釋).txt','x-to-h.css','x-to-h.txt'
 ]
@@ -454,6 +454,7 @@ function mulaDiv() {
         if(/期中考/.test(k)){aA.className = 'dv'}
         if(/期末考/.test(k)){aA.className = 'dc'}
         if(/ini/.test(k)){aA.className = 'lg'}
+        if(/js/.test(k)){aA.className = 'b'}
 
         // 加入data*名稱，才可動態查詢，有了這個屬性，可以用 CSS 來獲取
         g.setAttribute('data-title', k.toLowerCase())
@@ -493,7 +494,9 @@ function dt() {
         </div>
     <div id="mula">
         <h1 class="big">我的講義草稿 <input type="text" id="search" style="height:14pt;" placeholder="輸入關鍵字查詢" onkeyup="dt()">
-            <input type="button" class="lg" value="僅ini" onclick="MyIni('ini')">
+            <input type="button" class="yg" value="html" onclick="MyIni('htm')">
+            <input type="button" class="b" value="js" onclick="MyIni('js')">
+            <input type="button" class="lg" value="ini" onclick="MyIni('ini')">
             <input type="button" class="dv" value="期中考" onclick="MyIni('期中考')">
             <input type="button" class="dc" value="期末考" onclick="MyIni('期末考')">
             <input type="button" class="t" value="2022" onclick="MyIni('2022')">
