@@ -36,7 +36,7 @@ for (var i = 0; i < k.length; i++) {
             .replace(',"vinaya"', '')
             .replace(',".vscode"', '')
             .replace(',"nnn.txt"', '')
-            .replace(',"＠戒學答問.txt"', '')
+            .replace('"＠戒學答問.txt",', '')
             .replace(',"mini.cmd"', '')
     }
 }
