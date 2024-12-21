@@ -369,8 +369,10 @@ h6 { color:hsl(210,60%,70%);}
 			function alltoHref() {
 				// zzUp()
 				// 以正規搜尋網址列，請注意$1語法
+				// LINE的超連結，會把半形?變成全形？，所以要改回半形
 				div1.innerHTML = div1.innerHTML
-					.replace(/(https?:\/\/[a-zA-Z0-9\.\/_\=\-\?\:\;\&\%\#\@\+]+)/gi, '<a href="$1" target="_blank">▲網路連結</a>')
+					.replace(/(https?:\/\/[a-zA-Z0-9\.\/_\=\-\?\(\)\:\;\&\%\#\@\+]+)？([a-zA-Z0-9\.\/_\=\-\?\(\)\:\;\&\%\#\@\+]+)/gi, '$1?$2')
+					.replace(/(https?:\/\/[a-zA-Z0-9\.\/_\=\-\?\(\)\:\;\&\%\#\@\+]+)/gi, '<a href="$1" target="_blank">▲網路連結</a>')
 					.replace(/( target="_blank")+/gi, '$1')
 					.replace(/(\<\/a\>)+/gi, '$1')
 				// Copy()
