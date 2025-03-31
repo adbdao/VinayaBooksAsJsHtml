@@ -17,5 +17,5 @@ cd /d D:\GitHub\VinayaBooksAsJsHtml\
 node dir.js
 
 git add .
-git commit -am "upload JY && .adb.ini"
+git commit -am "add boddhisata sila && upload JY && .adb.ini"
 git push
