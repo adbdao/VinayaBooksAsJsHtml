@@ -26,3 +26,5 @@ git push
 git push
 git push --tags
 git push --tags
+
+git status
