@@ -21,7 +21,7 @@ cd /d D:\GitHub\VinayaBooksAsJsHtml\
 node dir.js
 
 git add .
-git commit -am "add PoSamgha.html"
+git commit -am "upload JY && .adb.ini"
 git push
 git push
 git push --tags
