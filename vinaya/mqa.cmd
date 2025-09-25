@@ -5,7 +5,7 @@ cd /d D:\GitHub\VinayaBooksAsJsHtml\
 node dir.js
 
 git add .
-git commit -am "update my Sila QA && add 2021 && mqa.cmd"
+git commit -am "update my Sila QA"
 
 git push
 git push --tags
