@@ -38,6 +38,7 @@ for (var i = 0; i < k.length; i++) {
             .replace(',"nnn.txt"', '')
             .replace('"＠戒學答問.txt",', '')
             .replace(',"mini.cmd"', '')
+            .replace(',"mqa.cmd"', '')
     }
 }
 
