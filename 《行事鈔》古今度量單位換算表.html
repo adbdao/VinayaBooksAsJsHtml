@@ -1,0 +1,408 @@
+﻿<!DOCTYPE HTML>
+<html>
+<meta charset="utf-8">
+
+<head>
+    <title>《行事鈔》古今度量單位換算表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base target="_blank">
+    <style>
+        * {
+            border-radius: 15px;
+        }
+
+        body {
+            color: gold;
+            background: black;
+            font-size: 18pt;
+        }
+
+        ::selection {
+            background: darkred;
+            color: yellow;
+        }
+
+        ::-moz-selection {
+            background: darkred;
+            color: yellow;
+        }
+
+        input:hover,
+        textarea:hover {
+            border: 2px solid fuchsia;
+            box-shadow: 5px 5px 20px darkorchid;
+        }
+
+        input:active,
+        textarea:active {
+            border-color: indigo #f3f #f6f indigo;
+            border-width: 5px;
+            border-style: solid;
+            box-shadow: 5px -5px 20px darkorchid;
+        }
+
+        table {
+            /* border: 3px solid darkgoldenrod; */
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        tr:hover {
+            border: 3px solid rgba(0, 245, 255, 0.925);
+            /* box-shadow: 5px 5px 20px cyan; */
+        }
+
+        tr:nth-child(1) {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        td {
+            border: 1px solid maroon;
+            padding: 2px 5px;
+        }
+
+        /* td:nth-child(1) {
+            width: 8vw;
+            text-align: center;
+        }
+
+        td:nth-child(2) {
+            width: 7vw;
+        }
+
+        td:nth-child(3) {
+            width: 15vw;
+        }
+
+        td:nth-child(4) {
+            width: 28vw;
+        } */
+
+        /* td:nth-child(n+3) {
+            width: 6vw;
+            text-align: center;
+        } */
+
+        /* td:nth-of-type(odd) {
+            background: lightgreen;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;} */
+        /*td:nth-of-type(even){ background: lightblue; }*/
+
+        input {
+            height: 30px;
+            background: pink;
+            color: navy;
+        }
+
+        #div0 {
+            background: #ccc;
+        }
+
+        #div1 {
+            font-size: 18pt;
+            color: orange;
+            /* white-space: pre-wrap; */
+            /*margin: 0 0 0 3cm;*/
+        }
+
+        #div1 input {
+            background: #fec;
+        }
+
+        #div2 input {
+            background: #aea;
+        }
+
+        #div3 input {
+            background: #ff8;
+        }
+
+        #div4 input {
+            background: #f99;
+        }
+
+        .name {
+            background: tan;
+            color: crimson;
+        }
+
+        #txt1 {
+            width: 130px;
+            height: 30px;
+        }
+
+        #myValue {
+            width: 200px;
+            background: #aca;
+        }
+
+        #myValue2 {
+            width: 200px;
+            background: snow;
+        }
+
+        .g {
+            color: gold;
+        }
+
+        .t {
+            color: tomato;
+        }
+
+        .r {
+            color: red;
+        }
+
+        .sb {
+            color: skyblue;
+        }
+
+        .ky {
+            color: khaki;
+        }
+
+        .pink {
+            color: pink;
+        }
+
+        .y {
+            color: yellow;
+        }
+
+        .o {
+            color: orange;
+        }
+
+        .yg {
+            color: yellowgreen;
+        }
+
+        .b {
+            color: lightblue;
+        }
+
+        .p {
+            color: mediumpurple;
+        }
+
+        .lg {
+            color: limegreen;
+            font-size: 0.9em;
+        }
+
+        .lsg {
+            color: lightseagreen;
+        }
+
+        .lc {
+            color: lightcyan;
+        }
+
+        .gy {
+            color: greenyellow;
+        }
+
+        .tan {
+            color: tan;
+        }
+
+        .magenta {
+            /*字體加到最粗是900*/
+            font-weight: 900;
+            /*再加陰影，就更粗，注意X軸Y軸，直排時會對調*/
+            text-shadow: 1px 1px magenta;
+            color: magenta;
+        }
+
+        #reload {
+            background: yellowgreen;
+        }
+
+        #btnHidden {
+            height: 8px;
+            width: 8px;
+            background: white;
+        }
+
+        #btnHidden:hover {
+            height: 35px;
+            width: 5cm;
+            background: white;
+        }
+    </style>
+    <style id="change"></style>
+    <script>
+        var oBody = document.getElementsByTagName('body')
+
+        function changeColor(col, bg) {
+            div1.style.color = col
+            div1.style.background = bg
+            change.innerHTML += 'body {color:' + col + ';background:' + bg + ';}'
+            tab1.style.color = col
+            tab1.style.background = bg
+        }
+        function changeSize(sz) {
+            div1.style.fontSize = sz
+            change.innerHTML += '.ru {font-size:' + sz + ';}'
+            tab1.style.fontSize = sz
+        }
+        function changeFamily(ff) {
+            div1.style.fontFamily = ff
+            change.innerHTML += '.ru {font-family:' + ff + ';}'
+            tab1.style.fontFamily = ff
+        }
+        window.onload = function () {
+            btn1.onclick = function () {
+                changeColor('black', 'beige')
+            }
+            btn2.onclick = function () {
+                changeColor('yellow', 'black')
+            }
+            btn3.onclick = function () {
+                changeColor('darkslategray', 'khaki')
+            }
+            btn5.onclick = function () {
+                changeColor('darkblue', 'tan')
+            }
+            btn4.onclick = function () {
+                changeColor('maroon', '#aca')
+            }
+            btn6.onclick = function () {
+                changeSize('76pt')
+            }
+            btn7.onclick = function () {
+                changeSize('20pt')
+            }
+            btn8.onclick = function () {
+                changeSize('16pt')
+            }
+            btn9.onclick = function () {
+                changeSize('48pt')
+            }
+            myValue.onkeyup = function () {
+                changeSize(myValue.value + 'pt')
+            }
+            myValue2.onkeyup = function () {
+                changeFamily(myValue2.value)
+            }
+
+            txt1.onkeyup = function () {
+                div1.innerHTML = txt1.value
+            }
+
+            var acc1 = [
+                "律中單位	換算方法	換算為現代單位",
+                "一尺	 	0.245 m",
+                "一斗	 	2000 ㏄",
+                "（古）一升	 	200 ㏄",
+                "一唐尺	一尺二	0.294 m",
+                "一唐斗	三斗	6000 ㏄",
+                "佛一指	二寸	0.049 m",
+                "一肘	一尺八	0.441 m",
+                "佛一搩手	二尺	0.49 m",
+                "一步	六尺	1.47 m",
+                "一尋	八尺	1.96 m",
+                "一弓	（小弓）七尺二	1.764 m",
+                "	（大弓）九尺	2.205 m",
+                "一槃陀	二十八肘	12.348 m",
+                "一里	三百步	441 m",
+                "一拘盧舍	五里	2205 m",
+                "一由旬	上者八十里	35280 m",
+                "	中者六十里	26460 m",
+                "	下者四十里	17640 m",
+                "一缽他	四升	800 ㏄"
+            ]
+            var acc2 = [
+                "戒律事物	律中說明	換算為現代單位",
+                "九衣	長五肘，廣三肘	長220.5 ㎝，廣132.3 ㎝",
+                "七衣	長五肘，廣三肘	長220.5 ㎝，廣132.3 ㎝",
+                "五衣	長四肘，廣二肘	長176.4 ㎝，廣88.2 ㎝",
+                "下缽	一斗半	3000 ㏄",
+                "上缽	三斗	6000 ㏄",
+                "應量衣	長如來八指，廣如來四指	長 39.2 ㎝，廣 19.6 ㎝",
+                "覆瘡衣	長佛四搩手，廣二搩手	長 196 ㎝，廣 98 ㎝",
+                "雨浴衣	長佛六搩手，廣二搩手半	長 294 ㎝，廣 122.5 ㎝",
+                "坐具	長佛二搩手，廣一搩手半	長 98 ㎝，廣 73.5 ㎝",
+                "	各增半搩手（長二搩手半，廣二搩手）	長 122.5 ㎝，廣 98 ㎝",
+                "佛等量衣	長佛九搩手，廣六搩手	長 441 ㎝，廣 294 ㎝",
+                "不處分房量	長佛十二搩手，內廣七搩手	長 588 ㎝，廣 343 ㎝",
+                "床足	高佛八指，廣三肘	高 39.2 ㎝，廣 132.3 ㎝",
+                "僧作法界最大範圍	三由旬（一由旬四十里）	52.92 ㎞",
+                "尼作法界最大範圍	一拘盧舍	2205 m",
+                "不可分別聚落界範圍	六十三步	92.61 m",
+                "無難蘭若界範圍	五里	2205 m",
+                "有難蘭若界範圍	七槃陀	86.44 m",
+                "自然護衣界勢分	十三步	19.11 m",
+                "自然護衣界中林界	十四肘	6.17 m",
+                "自然護衣界中舍界、井界、水界	二十五肘	11.03 m",
+                "自然護衣界中道行界	四十九尋	96.04 m",
+                "自然護衣界中蘭若界	五十八步四尺八寸	86.44 m"
+            ]
+            addTable('《行事鈔》古今度量單位換算表', tab3, 'black', '', '\t')
+            addTable('', tab1, 'black', acc1, '\t')
+            addTable('', tab2, 'black', acc2, '\t')
+
+            // 範例圖表
+            function addTable(ps, tab, background, Arr, nt) {
+                // 二維陣列
+                var Arr2 = []
+                // 必須加入tbody，否則無法插入td
+                tab.innerHTML = ps + '<tbody></tbody>'
+                for (var i = 0; i < Arr.length; i++) {
+                    Arr2[i] = Arr[i].split(nt)
+                    var oTr = document.createElement('tr')
+                    // 記得用[i]
+                    for (var j of Arr2[i]) {
+                        var oTd = document.createElement('td')
+                        oTd.innerHTML = j
+                        oTr.appendChild(oTd)
+                    }
+                    tab.tBodies[0].appendChild(oTr)
+                    tab.style.background = background
+                }
+            }
+
+            // 隱藏下方所有按鈕
+            btnHidden.onclick = function () {
+                if (divHidden.style.display == 'block') {
+                    divHidden.style.display = 'none'
+                } else {
+                    divHidden.style.display = 'block'
+                }
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="divHidden" style="display: block;">
+        <input id="reload" type="button" value="重整頁面" onclick="javascript:window.location.reload()" />
+        <input id="btn1" type="button" value="白色系主題">
+        <input id="btn3" type="button" value="黃色系主題">
+        <input id="btn5" type="button" value="茶色系主題">
+        <input id="btn4" type="button" value="綠色系主題">
+        <input id="btn2" type="button" value="黑色系主題">
+
+        <input id="btn8" type="button" value="16號字">
+        <input id="btn7" type="button" value="20號字">
+        <input id="btn9" type="button" value="48號字">
+        <input id="btn6" type="button" value="76號字">
+        <input id="myValue" type="number" placeholder='輸入數字，立刻變換字體大小' />
+        <input id="myValue2" type="text" placeholder='輸入字型名稱，立刻變換字型' />
+        <textarea id="txt1" type="text" placeholder='可打字'></textarea>
+        <br />
+        <div id="div1">
+        </div>
+    </div>
+    <input type="button" id="btnHidden" value="隱藏多餘按鈕" />
+    <table id="tab3"></table>
+    <table id="tab1"></table>
+    <hr>
+    <table id="tab2"></table>
+</body>
+
+</html>
