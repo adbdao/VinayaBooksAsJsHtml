@@ -14,7 +14,7 @@
         body {
             color: gold;
             background: black;
-            font-size: 18pt;
+            font-size: 14pt;
         }
 
         ::selection {
@@ -241,18 +241,15 @@
             div1.style.color = col
             div1.style.background = bg
             change.innerHTML += 'body {color:' + col + ';background:' + bg + ';}'
-            tab1.style.color = col
-            tab1.style.background = bg
+            change.innerHTML += 'table {color:' + col + ';background:' + bg + ';}'
         }
         function changeSize(sz) {
             div1.style.fontSize = sz
-            change.innerHTML += '.ru {font-size:' + sz + ';}'
-            tab1.style.fontSize = sz
+            change.innerHTML += 'table {font-size:' + sz + ';}'
         }
         function changeFamily(ff) {
             div1.style.fontFamily = ff
-            change.innerHTML += '.ru {font-family:' + ff + ';}'
-            tab1.style.fontFamily = ff
+            change.innerHTML += 'table {font-family:' + ff + ';}'
         }
         window.onload = function () {
             btn1.onclick = function () {
@@ -295,24 +292,24 @@
 
             var acc1 = [
                 "律中單位	換算方法	換算為現代單位",
-                "一尺	 	0.245 m",
+                "一尺	 	24.5 ㎝",
                 "一斗	 	2000 ㏄",
                 "（古）一升	 	200 ㏄",
-                "一唐尺	一尺二	0.294 m",
+                "一唐尺	一尺二	29.4 ㎝",
                 "一唐斗	三斗	6000 ㏄",
-                "佛一指	二寸	0.049 m",
-                "一肘	一尺八	0.441 m",
-                "佛一搩手	二尺	0.49 m",
+                "佛一指	二寸	4.9 ㎝",
+                "一肘	一尺八	44.1 ㎝",
+                "佛一搩手	二尺	49 ㎝",
                 "一步	六尺	1.47 m",
                 "一尋	八尺	1.96 m",
                 "一弓	（小弓）七尺二	1.764 m",
                 "	（大弓）九尺	2.205 m",
                 "一槃陀	二十八肘	12.348 m",
                 "一里	三百步	441 m",
-                "一拘盧舍	五里	2205 m",
-                "一由旬	上者八十里	35280 m",
-                "	中者六十里	26460 m",
-                "	下者四十里	17640 m",
+                "一拘盧舍	五里	2.205 ㎞",
+                "一由旬	上者八十里	35.280 ㎞",
+                "	中者六十里	26.460 ㎞",
+                "	下者四十里	17.640 ㎞",
                 "一缽他	四升	800 ㏄"
             ]
             var acc2 = [
@@ -331,9 +328,9 @@
                 "不處分房量	長佛十二搩手，內廣七搩手	長 588 ㎝，廣 343 ㎝",
                 "床足	高佛八指，廣三肘	高 39.2 ㎝，廣 132.3 ㎝",
                 "僧作法界最大範圍	三由旬（一由旬四十里）	52.92 ㎞",
-                "尼作法界最大範圍	一拘盧舍	2205 m",
+                "尼作法界最大範圍	一拘盧舍	2.205 ㎞",
                 "不可分別聚落界範圍	六十三步	92.61 m",
-                "無難蘭若界範圍	五里	2205 m",
+                "無難蘭若界範圍	五里	2.205 ㎞",
                 "有難蘭若界範圍	七槃陀	86.44 m",
                 "自然護衣界勢分	十三步	19.11 m",
                 "自然護衣界中林界	十四肘	6.17 m",
@@ -341,9 +338,9 @@
                 "自然護衣界中道行界	四十九尋	96.04 m",
                 "自然護衣界中蘭若界	五十八步四尺八寸	86.44 m"
             ]
-            addTable('《行事鈔》古今度量單位換算表', tab3, 'black', '', '\t')
-            addTable('', tab1, 'black', acc1, '\t')
-            addTable('', tab2, 'black', acc2, '\t')
+            addTable('《行事鈔》古今度量單位換算表', tab3, '', '', '\t')
+            addTable('', tab1, '', acc1, '\t')
+            addTable('', tab2, '', acc2, '\t')
 
             // 範例圖表
             function addTable(ps, tab, background, Arr, nt) {

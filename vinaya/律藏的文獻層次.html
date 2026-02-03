@@ -41,7 +41,7 @@
             box-shadow: 5px -5px 20px darkorchid;
         }
 
-        #tab1 {
+        table {
             /* border: 3px solid darkgoldenrod; */
             border-collapse: collapse;
             margin: auto;
@@ -241,18 +241,15 @@
             div1.style.color = col
             div1.style.background = bg
             change.innerHTML += 'body {color:' + col + ';background:' + bg + ';}'
-            tab1.style.color = col
-            tab1.style.background = bg
+            change.innerHTML += 'table {color:' + col + ';background:' + bg + ';}'
         }
         function changeSize(sz) {
             div1.style.fontSize = sz
-            change.innerHTML += '.ru {font-size:' + sz + ';}'
-            tab1.style.fontSize = sz
+            change.innerHTML += 'table {font-size:' + sz + ';}'
         }
         function changeFamily(ff) {
             div1.style.fontFamily = ff
-            change.innerHTML += '.ru {font-family:' + ff + ';}'
-            tab1.style.fontFamily = ff
+            change.innerHTML += 'table {font-family:' + ff + ';}'
         }
         window.onload = function () {
             btn1.onclick = function () {
@@ -318,7 +315,7 @@
                     tab.style.background = background
                 }
             }
-            addTable('律藏的三次文獻', tab1, 'black', acc, ' ')
+            addTable('律藏的三次文獻', tab1, '', acc, ' ')
 
             // 隱藏下方所有按鈕
             btnHidden.onclick = function () {

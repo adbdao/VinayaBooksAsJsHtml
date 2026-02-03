@@ -41,7 +41,7 @@
             box-shadow: 5px -5px 20px darkorchid;
         }
 
-        #tab1,#tab2,#tab3,#tab4 {
+        table {
             /* border: 3px solid darkgoldenrod; */
             border-collapse: collapse;
             margin: auto;
@@ -241,18 +241,15 @@
             div1.style.color = col
             div1.style.background = bg
             change.innerHTML += 'body {color:' + col + ';background:' + bg + ';}'
-            tab1.style.color = col
-            tab1.style.background = bg
+            change.innerHTML += 'table {color:' + col + ';background:' + bg + ';}'
         }
         function changeSize(sz) {
             div1.style.fontSize = sz
-            change.innerHTML += '.ru {font-size:' + sz + ';}'
-            tab1.style.fontSize = sz
+            change.innerHTML += 'table {font-size:' + sz + ';}'
         }
         function changeFamily(ff) {
             div1.style.fontFamily = ff
-            change.innerHTML += '.ru {font-family:' + ff + ';}'
-            tab1.style.fontFamily = ff
+            change.innerHTML += 'table {font-family:' + ff + ';}'
         }
         window.onload = function () {
             btn1.onclick = function () {
@@ -324,10 +321,10 @@
                     tab.style.background = background
                 }
             }
-            addTable('六諍本', tab1, 'black', acc1, ' ')
-            addTable('簡集智人法', tab2, 'black', acc2, ' ')
-            addTable('四諍對七滅諍法', tab3, 'black', acc3, ' ')
-            addTable('有三非法與罪處所毘尼', tab4, 'black', acc4, ' ')
+            addTable('六諍本', tab1, '', acc1, ' ')
+            addTable('簡集智人法', tab2, '', acc2, ' ')
+            addTable('四諍對七滅諍法', tab3, '', acc3, ' ')
+            addTable('有三非法與罪處所毘尼', tab4, '', acc4, ' ')
 
             // 隱藏下方所有按鈕
             btnHidden.onclick = function () {
