@@ -16,11 +16,7 @@ self.addEventListener("message", (event) => {
 self.addEventListener('install', async (event) => {
   event.waitUntil(
     caches.open(CACHE)
-      // .then((cache) => cache.add(offlineFallbackPage))
-      .then((cache) => cache.addAll([
-        //   只要有一個載入失敗，就全部失敗，所以盡量少
-        "index.html"
-      ]))
+      .then((cache) => cache.add(offlineFallbackPage))
   );
 });
 
