@@ -5,7 +5,7 @@ cd /d D:\GitHub\VinayaBooksAsJsHtml\
 node dir.js
 
 git add .
-git commit -am "update my Sila QA"
+git commit -am "add Buddhisata Sila DEDU"
 
 git push
 git push --tags
