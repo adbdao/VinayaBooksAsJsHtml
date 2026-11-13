@@ -38,6 +38,7 @@ for (var i = 0; i < k.length; i++) {
             .replace(',"icons"', '')
             .replace(',"pwabuilder-sw.js"', '')
             .replace(',"VinayaBooksAsJsHtml.webmanifest"', '')
+            .replace(',"README.md"', '')
     }
 }
 
