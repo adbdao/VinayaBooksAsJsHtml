@@ -5,7 +5,8 @@ cd /d D:\GitHub\VinayaBooksAsJsHtml\
 node dir.js
 
 git add .
-git commit -am "Hong Kong JY && update my Sila QA"
+git commit -am "Hong Kong JY"
+@REM  git commit -am "update my Sila QA"
 
 git push
 git push --tags
